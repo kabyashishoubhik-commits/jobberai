@@ -1,0 +1,1921 @@
+[00:00:01.681] Server  LOG      ✓ Ready in 1160ms
+[00:00:42.347] Server  LOG      ○ Compiling / ...
+[00:00:46.259] Server  ERROR   Invalid DOM property `stop-color`. Did you mean `stopColor`?
+[00:00:47.176] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:47.711] Browser ERROR   Invalid DOM property `%s`. Did you mean `%s`? stop-color stopColor
+[00:00:48.508] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <div className="mx-auto ma...">
+      ...
+        <CardDemo>
+          <Card>
+            <div className="max-w-sm w...">
+              <CardSkeletonContainer>
+                <div className="h-[15rem] ...">
+                  <Skeleton>
+                    <div className="p-8 overfl...">
+                      <div>
+                      <div className="h-40 w-px ...">
+                        <div className="w-10 h-32 ...">
+                          <Sparkles>
+                            <div className="absolute i...">
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "74.67416917820036%"
+-                                   top: "35.8639%"
++                                   left: "82.1206064775316%"
+-                                   left: "58.5161%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "82.78816925366941%"
+-                                   top: "60.1614%"
++                                   left: "63.06771151485987%"
+-                                   left: "25.1331%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "36.61365239676013%"
+-                                   top: "60.8341%"
++                                   left: "95.45118288218977%"
+-                                   left: "0.441576%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "66.31614695819118%"
+-                                   top: "71.006%"
++                                   left: "82.51521101025455%"
+-                                   left: "19.0185%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "1.2827910260132858%"
+-                                   top: "93.0025%"
++                                   left: "89.39068708689031%"
+-                                   left: "22.9176%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "74.79389734196727%"
+-                                   top: "77.7474%"
++                                   left: "15.212770566622124%"
+-                                   left: "26.0725%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "67.37091577004523%"
+-                                   top: "54.6261%"
++                                   left: "86.55628328369349%"
+-                                   left: "2.72757%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "63.628145149797696%"
+-                                   top: "72.8601%"
++                                   left: "86.20194239489206%"
+-                                   left: "28.6825%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "74.68261431817312%"
+-                                   top: "89.0638%"
++                                   left: "0.6002111931036502%"
+-                                   left: "80.5937%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "86.46977841858907%"
+-                                   top: "85.1206%"
++                                   left: "31.04221676256357%"
+-                                   left: "35.0645%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "55.14933637930057%"
+-                                   top: "35.7867%"
++                                   left: "87.10458448769602%"
+-                                   left: "98.9741%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "77.78811537844325%"
+-                                   top: "20.8418%"
++                                   left: "93.06984074425417%"
+-                                   left: "81.7937%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+              ...
+      ...
+        <Month data-animated-month={undefined} className="flex flex-..." style={undefined} displayIndex={0} ...>
+          <div data-animated-month={undefined} className="flex flex-..." style={undefined}>
+            <MonthCaption>
+            <MonthGrid role="grid" aria-multiselectable={false} aria-label="April 2026" className="rdp-month_..." ...>
+              <table role="grid" aria-multiselectable={false} aria-label="April 2026" className="rdp-month_..." ...>
+                <Weekdays>
+                <Weeks data-animated-weeks={undefined} className="rdp-weeks" style={undefined}>
+                  <tbody data-animated-weeks={undefined} className="rdp-weeks" style={undefined}>
+                    <Week className="flex w-ful..." style={undefined} week={{days:[...], ...}}>
+                      <tr className="flex w-ful..." style={undefined}>
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="3/29/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="3/29/2026"
+-                                 data-day="29/3/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Sunday, March 29th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 29
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="3/30/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="3/30/2026"
+-                                 data-day="30/3/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Monday, March 30th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 30
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="3/31/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="3/31/2026"
+-                                 data-day="31/3/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Tuesday, March 31st, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 31
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/1/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/1/2026"
+-                                 data-day="1/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Wednesday, April 1st, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 1
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/2/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/2/2026"
+-                                 data-day="2/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Thursday, April 2nd, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 2
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/3/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/3/2026"
+-                                 data-day="3/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Friday, April 3rd, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 3
+                        ...
+                    <Week className="flex w-ful..." style={undefined} week={{days:[...], ...}}>
+                      <tr className="flex w-ful..." style={undefined}>
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/5/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/5/2026"
+-                                 data-day="5/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Sunday, April 5th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 5
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/6/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/6/2026"
+-                                 data-day="6/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Monday, April 6th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 6
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/7/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/7/2026"
+-                                 data-day="7/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Tuesday, April 7th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 7
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/8/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/8/2026"
+-                                 data-day="8/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Wednesday, April 8th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 8
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/9/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/9/2026"
+-                                 data-day="9/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Thursday, April 9th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 9
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/10/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/10/2026"
+-                                 data-day="10/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Friday, April 10th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 10
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/11/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/11/2026"
+-                                 data-day="11/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Saturday, April 11th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 11
+                    <Week className="flex w-ful..." style={undefined} week={{days:[...], ...}}>
+                      <tr className="flex w-ful..." style={undefined}>
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/12/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/12/2026"
+-                                 data-day="12/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Sunday, April 12th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 12
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/13/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/13/2026"
+-                                 data-day="13/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Monday, April 13th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 13
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/14/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/14/2026"
+-                                 data-day="14/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Tuesday, April 14th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 14
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/15/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/15/2026"
+-                                 data-day="15/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Wednesday, April 15th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 15
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/16/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/16/2026"
+-                                 data-day="16/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Thursday, April 16th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 16
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/17/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/17/2026"
+-                                 data-day="17/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Friday, April 17th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 17
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/18/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/18/2026"
+-                                 data-day="18/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Saturday, April 18th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 18
+                    <Week className="flex w-ful..." style={undefined} week={{days:[...], ...}}>
+                      <tr className="flex w-ful..." style={undefined}>
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/19/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/19/2026"
+-                                 data-day="19/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Sunday, April 19th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 19
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/20/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/20/2026"
+-                                 data-day="20/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Monday, April 20th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 20
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/21/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/21/2026"
+-                                 data-day="21/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Tuesday, April 21st, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 21
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/22/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/22/2026"
+-                                 data-day="22/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Wednesday, April 22nd, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 22
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/23/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/23/2026"
+-                                 data-day="23/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Thursday, April 23rd, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 23
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/24/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/24/2026"
+-                                 data-day="24/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Friday, April 24th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 24
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/25/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/25/2026"
+-                                 data-day="25/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Saturday, April 25th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 25
+                    <Week className="flex w-ful..." style={undefined} week={{days:[...], ...}}>
+                      <tr className="flex w-ful..." style={undefined}>
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/26/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/26/2026"
+-                                 data-day="26/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Sunday, April 26th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 26
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/27/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/27/2026"
+-                                 data-day="27/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Monday, April 27th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 27
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={true} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/28/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/28/2026"
+-                                 data-day="28/4/2026"
+                                  data-selected-single={true}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={0}
+                                  aria-label="Today, Tuesday, April 28th, 2026, selected"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 28
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/29/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/29/2026"
+-                                 data-day="29/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Wednesday, April 29th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 29
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="4/30/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="4/30/2026"
+-                                 data-day="30/4/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Thursday, April 30th, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 30
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="5/1/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="5/1/2026"
+-                                 data-day="1/5/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Friday, May 1st, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 1
+                        <Day day={{date:Date, ...}} modifiers={{focused:false, ...}} className={"relative..."} style={{}} ...>
+                          <td className={"relative..."} style={{}} role="gridcell" aria-selected={undefined} ...>
+                            <CalendarDayButton className="rdp-day_bu..." style={undefined} type="button" ...>
+                              <Button ref={{current:null}} variant="ghost" size="icon" data-day="5/2/2026" ...>
+                                <button
+                                  data-slot="button"
+                                  className={"items-center justify-center whitespace-nowrap rounded-md text-sm transi..."}
+                                  ref={{current:null}}
++                                 data-day="5/2/2026"
+-                                 data-day="2/5/2026"
+                                  data-selected-single={undefined}
+                                  data-range-start={undefined}
+                                  data-range-end={undefined}
+                                  data-range-middle={undefined}
+                                  style={undefined}
+                                  type="button"
+                                  disabled={undefined}
+                                  tabIndex={-1}
+                                  aria-label="Saturday, May 2nd, 2026"
+                                  onClick={function DayPicker.useCallback[handleDayClick]}
+                                  onBlur={function DayPicker.useCallback[handleDayBlur]}
+                                  onFocus={function DayPicker.useCallback[handleDayFocus]}
+                                  onKeyDown={function DayPicker.useCallback[handleDayKeyDown]}
+                                  onMouseEnter={function DayPicker.useCallback[handleDayMouseEnter]}
+                                  onMouseLeave={function DayPicker.useCallback[handleDayMouseLeave]}
+                                >
++                                 2
+      ...
+
+[00:00:49.007] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:49.007] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:49.007] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1777360781733} /_vercel/insights/view
+[00:01:42.252] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:42.516] Browser ERROR   Invalid DOM property `%s`. Did you mean `%s`? stop-color stopColor
+[00:01:42.884] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <div className="mb-20">
+      <div className="grid grid-...">
+        <div>
+        <CardDemo>
+          <Card>
+            <div className="max-w-sm w...">
+              <CardSkeletonContainer>
+                <div className="h-[15rem] ...">
+                  <Skeleton>
+                    <div className="p-8 overfl...">
+                      <div>
+                      <div className="h-40 w-px ...">
+                        <div className="w-10 h-32 ...">
+                          <Sparkles>
+                            <div className="absolute i...">
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "54.796664319280886%"
+-                                   top: "15.6521%"
++                                   left: "27.85868098934531%"
+-                                   left: "11.7909%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "78.30015865116874%"
+-                                   top: "16.4187%"
++                                   left: "49.49794502187203%"
+-                                   left: "24.4974%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "93.8834467714044%"
+-                                   top: "51.0728%"
++                                   left: "11.54253746814804%"
+-                                   left: "70.2063%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "72.90348127712757%"
+-                                   top: "86.8732%"
++                                   left: "59.73527567898217%"
+-                                   left: "56.8909%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "22.248886455959582%"
+-                                   top: "94.4873%"
++                                   left: "7.098909072272141%"
+-                                   left: "8.66821%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "76.79122333725617%"
+-                                   top: "96.3996%"
++                                   left: "67.2772637663656%"
+-                                   left: "21.5715%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "42.53746603528713%"
+-                                   top: "40.7292%"
++                                   left: "23.0683805877575%"
+-                                   left: "78.7062%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "8.490219466362237%"
+-                                   top: "17.1118%"
++                                   left: "71.51092096737713%"
+-                                   left: "53.1959%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "3.1596468768791186%"
+-                                   top: "17.5475%"
++                                   left: "42.68640707479299%"
+-                                   left: "20.9263%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "13.38840830820156%"
+-                                   top: "98.8209%"
++                                   left: "40.073853772046284%"
+-                                   left: "23.6773%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "74.00271312118596%"
+-                                   top: "25.2901%"
++                                   left: "30.687377447547735%"
+-                                   left: "52.356%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "69.79559289680004%"
+-                                   top: "67.7242%"
++                                   left: "35.403528592318125%"
+-                                   left: "57.0137%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+              ...
+
+[00:01:43.310] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:43.310] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:01:43.310] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1777360836040} /_vercel/insights/view
+[00:01:57.767] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1777360850494} /_vercel/insights/view
+[00:02:27.912] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1777360880489} /_vercel/insights/view
+[00:02:32.602] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:32.888] Browser ERROR   Invalid DOM property `%s`. Did you mean `%s`? stop-color stopColor
+[00:02:33.271] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <div className="mb-20">
+      <div className="grid grid-...">
+        <div>
+        <CardDemo>
+          <Card>
+            <div className="max-w-sm w...">
+              <CardSkeletonContainer>
+                <div className="h-[15rem] ...">
+                  <Skeleton>
+                    <div className="p-8 overfl...">
+                      <div>
+                      <div className="h-40 w-px ...">
+                        <div className="w-10 h-32 ...">
+                          <Sparkles>
+                            <div className="absolute i...">
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "69.4904018174369%"
+-                                   top: "58.6868%"
++                                   left: "67.32638024848019%"
+-                                   left: "38.9265%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "53.96136322310334%"
+-                                   top: "93.4501%"
++                                   left: "9.085698881128469%"
+-                                   left: "54.7692%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "61.15925620275272%"
+-                                   top: "34.1169%"
++                                   left: "22.925573630552055%"
+-                                   left: "94.8781%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "39.09422134644623%"
+-                                   top: "94.2189%"
++                                   left: "96.38494556855626%"
+-                                   left: "79.6171%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "26.50824633061347%"
+-                                   top: "30.6636%"
++                                   left: "40.127155649484756%"
+-                                   left: "47.1869%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "76.92161786915788%"
+-                                   top: "17.9324%"
++                                   left: "41.41741199485046%"
+-                                   left: "67.1019%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "72.51092018559788%"
+-                                   top: "29.583%"
++                                   left: "37.95516741677575%"
+-                                   left: "73.813%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "84.69164045836126%"
+-                                   top: "46.5798%"
++                                   left: "44.21633246874735%"
+-                                   left: "39.8449%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "35.96844772149262%"
+-                                   top: "14.7283%"
++                                   left: "91.1346226586171%"
+-                                   left: "62.2028%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "76.48889783356172%"
+-                                   top: "54.1717%"
++                                   left: "27.801976939672667%"
+-                                   left: "33.2562%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "2.779401418056804%"
+-                                   top: "61.6424%"
++                                   left: "57.14780966794184%"
+-                                   left: "42.7497%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+                              <motion.span animate={{top:"calc(...", ...}} transition={{...}} ...>
+                                <span
+                                  className="inline-block bg-black dark:bg-white"
+                                  style={{
++                                   position: "absolute"
+-                                   position: "absolute"
++                                   top: "49.84131871622846%"
+-                                   top: "93.9212%"
++                                   left: "2.6554430059307688%"
+-                                   left: "42.0858%"
++                                   width: "2px"
+-                                   width: "2px"
++                                   height: "2px"
+-                                   height: "2px"
++                                   borderRadius: "50%"
++                                   zIndex: 1
+-                                   border-top-left-radius: "50%"
+-                                   border-top-right-radius: "50%"
+-                                   border-bottom-right-radius: "50%"
+-                                   border-bottom-left-radius: "50%"
+-                                   z-index: "1"
+                                  }}
+                                  ref={function useMotionRef.useCallback}
+                                >
+              ...
+
+[00:02:33.527] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:33.527] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:02:33.527] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1777360886251} /_vercel/insights/view
+[00:03:38.088] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1777360950814} /_vercel/insights/view
+[00:03:40.747] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1777360953379} /_vercel/insights/view
+[00:03:45.647] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/signup color: rgb(120, 120, 120) color: inherit {"dp":"/signup","o":"http://localhost:3000/signup","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1777360958371} /_vercel/insights/view
+[00:04:07.602] Browser ERROR   A component is changing a controlled input to be uncontrolled. This is likely caused by the value changing from a defined to undefined, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://react.dev/link/controlled-components
+[00:05:20.362] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:20.620] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:05:20.620] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/signup","route":"/signup"}
+[00:05:20.620] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/signup color: rgb(120, 120, 120) color: inherit {"dp":"/signup","o":"http://localhost:3000/signup","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1777361053349} /_vercel/insights/view
+[00:20:20.408] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1777361953136} /_vercel/insights/view
