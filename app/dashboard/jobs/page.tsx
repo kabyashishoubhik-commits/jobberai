@@ -11,9 +11,9 @@ import { useState } from "react"
 export default function JobsPage() {
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedFilters, setSelectedFilters] = useState<string[]>([])
-
-  const jobs = [
+  const [jobs, setJobs] = useState([
     {
+      id: 1,
       title: "Senior Product Manager",
       company: "Stripe",
       location: "San Francisco, CA",
@@ -21,8 +21,10 @@ export default function JobsPage() {
       matchScore: 94,
       tags: ["Remote", "Management", "B2B SaaS"],
       posted: "2 hours ago",
+      isApplied: false,
     },
     {
+      id: 2,
       title: "Full Stack Engineer",
       company: "Vercel",
       location: "Remote",
@@ -30,8 +32,10 @@ export default function JobsPage() {
       matchScore: 87,
       tags: ["Remote", "React", "Node.js"],
       posted: "4 hours ago",
+      isApplied: false,
     },
     {
+      id: 3,
       title: "Design System Lead",
       company: "Figma",
       location: "San Francisco, CA",
@@ -39,8 +43,10 @@ export default function JobsPage() {
       matchScore: 79,
       tags: ["Design", "Leadership", "UI/UX"],
       posted: "6 hours ago",
+      isApplied: false,
     },
     {
+      id: 4,
       title: "Data Scientist",
       company: "Airbnb",
       location: "San Francisco, CA",
@@ -48,8 +54,15 @@ export default function JobsPage() {
       matchScore: 85,
       tags: ["ML", "Python", "Analytics"],
       posted: "8 hours ago",
+      isApplied: false,
     },
-  ]
+  ])
+
+  const handleApply = (jobId: number) => {
+    setJobs(jobs.map(job => 
+      job.id === jobId ? { ...job, isApplied: true } : job
+    ))
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -84,8 +97,12 @@ export default function JobsPage() {
 
           {/* Jobs Grid */}
           <div className="space-y-4">
-            {jobs.map((job, i) => (
-              <JobCard key={i} {...job} />
+            {jobs.map((job) => (
+              <JobCard 
+                key={job.id} 
+                {...job}
+                onApply={() => handleApply(job.id)}
+              />
             ))}
           </div>
         </div>

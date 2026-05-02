@@ -7,8 +7,11 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
+import { authAPI } from "@/lib/api"
 
 export default function SignupPage() {
+  const router = useRouter()
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState({
     name: "",
@@ -17,20 +20,46 @@ export default function SignupPage() {
     confirmPassword: "",
   })
   const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState("")
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
+    setError("")
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (step === 1) {
+      // Validate step 1
+      if (!formData.name || !formData.email || !formData.password || !formData.confirmPassword) {
+        setError("All fields are required")
+        return
+      }
+      if (formData.password.length < 8) {
+        setError("Password must be at least 8 characters")
+        return
+      }
+      if (formData.password !== formData.confirmPassword) {
+        setError("Passwords do not match")
+        return
+      }
       setStep(2)
     } else {
+      // Submit signup
       setIsLoading(true)
-      // Simulate signup
-      setTimeout(() => setIsLoading(false), 1000)
+      try {
+        await authAPI.signup(
+          formData.name,
+          formData.email,
+          formData.password,
+          formData.confirmPassword
+        )
+        router.push('/onboarding')
+      } catch (err: any) {
+        setError(err.message)
+        setIsLoading(false)
+      }
     }
   }
 
@@ -39,6 +68,12 @@ export default function SignupPage() {
       title={step === 1 ? "Create Account" : "Complete Profile"}
       subtitle="Join thousands landing more interviews with AI"
     >
+      {error && (
+        <div className="mb-4 p-3 bg-red-100 text-red-700 rounded text-sm">
+          {error}
+        </div>
+      )}
+      
       <form onSubmit={handleSubmit} className="space-y-4">
         {step === 1 ? (
           <>
@@ -107,34 +142,8 @@ export default function SignupPage() {
           </>
         ) : (
           <>
-            <div>
-              <label className="block text-sm font-medium mb-2">Target Roles</label>
-              <Input type="text" placeholder="e.g., Product Manager, Senior Engineer" />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2">Target Locations</label>
-              <Input type="text" placeholder="e.g., San Francisco, Remote" />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2">Preferred Salary Range</label>
-              <div className="flex gap-2">
-                <Input type="text" placeholder="Min" />
-                <Input type="text" placeholder="Max" />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2">Job Boards</label>
-              <div className="space-y-2">
-                {["LinkedIn", "Indeed", "Wellfound", "Glassdoor"].map((board) => (
-                  <label key={board} className="flex items-center gap-2 text-sm">
-                    <input type="checkbox" defaultChecked />
-                    <span>{board}</span>
-                  </label>
-                ))}
-              </div>
+            <div className="p-3 bg-blue-50 text-blue-700 rounded text-sm">
+              Great! You'll set up your preferences after account creation.
             </div>
           </>
         )}

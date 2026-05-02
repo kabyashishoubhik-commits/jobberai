@@ -16,7 +16,7 @@ export default function PrivacyPage() {
             <Card className="p-6 glassmorphic border-border/20">
               <h2 className="text-2xl font-bold mb-4">1. Introduction</h2>
               <p className="text-muted-foreground leading-relaxed">
-                JobAccelerateAI ("Company", "we", "our", or "us") operates the JobAccelerator website and mobile
+                Jobber AI ("Company", "we", "our", or "us") operates the Jobber AI website and mobile
                 application (the "Service"). This page informs you of our policies regarding the collection, use, and
                 disclosure of personal data when you use our Service and the choices you have associated with that data.
               </p>

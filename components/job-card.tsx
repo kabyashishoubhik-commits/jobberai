@@ -3,9 +3,12 @@
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { BookmarkPlus, ArrowUpRight } from "lucide-react"
+import { BookmarkPlus, ArrowUpRight, Loader } from "lucide-react"
+import { useState } from "react"
+import { applicationsAPI } from "@/lib/api"
 
 interface JobCardProps {
+  id?: number
   title: string
   company: string
   location: string
@@ -13,9 +16,43 @@ interface JobCardProps {
   matchScore: number
   tags: string[]
   posted: string
+  isApplied?: boolean
+  onApply?: () => void
 }
 
-export function JobCard({ title, company, location, salary, matchScore, tags, posted }: JobCardProps) {
+export function JobCard({ 
+  id, 
+  title, 
+  company, 
+  location, 
+  salary, 
+  matchScore, 
+  tags, 
+  posted,
+  isApplied: initialApplied = false,
+  onApply
+}: JobCardProps) {
+  const [isLoading, setIsLoading] = useState(false)
+  const [isApplied, setIsApplied] = useState(initialApplied)
+  const [error, setError] = useState("")
+
+  const handleApply = async () => {
+    if (!id || isApplied) return
+
+    try {
+      setIsLoading(true)
+      setError("")
+      await applicationsAPI.apply(id)
+      setIsApplied(true)
+      onApply?.()
+    } catch (err: any) {
+      setError(err.message || "Failed to apply")
+      console.error("Apply error:", err)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
   return (
     <Card className="p-6 glassmorphic border-border/20 hover:shadow-smooth hover:-translate-y-1 transition-all group">
       <div className="flex items-start justify-between mb-3">
@@ -40,6 +77,12 @@ export function JobCard({ title, company, location, salary, matchScore, tags, po
         ))}
       </div>
 
+      {error && (
+        <div className="mb-3 p-2 bg-red-100 text-red-700 text-xs rounded">
+          {error}
+        </div>
+      )}
+
       <div className="flex items-center justify-between">
         <div>
           <p className="text-xs text-muted-foreground mb-1">Match Score</p>
@@ -53,10 +96,19 @@ export function JobCard({ title, company, location, salary, matchScore, tags, po
             <span className="text-sm font-bold">{matchScore}%</span>
           </div>
         </div>
-        <Button size="sm" className="bg-primary hover:bg-primary/90" asChild>
-          <a href="#" className="flex items-center gap-1">
-            Apply <ArrowUpRight className="w-3 h-3" />
-          </a>
+        <Button 
+          size="sm" 
+          className={`flex items-center gap-1 ${
+            isApplied 
+              ? "bg-green-600 hover:bg-green-700" 
+              : "bg-primary hover:bg-primary/90"
+          }`}
+          onClick={handleApply}
+          disabled={isLoading || isApplied}
+        >
+          {isLoading && <Loader className="w-3 h-3 animate-spin" />}
+          {isApplied ? "Applied" : "Apply"} 
+          {!isLoading && <ArrowUpRight className="w-3 h-3" />}
         </Button>
       </div>
 

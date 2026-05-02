@@ -13,6 +13,7 @@ import {
   CreditCard,
   LogOut,
   ChevronDown,
+  Zap,
 } from "lucide-react"
 import { useState } from "react"
 
@@ -21,6 +22,7 @@ const navigation = [
   { name: "Job Matches", href: "/dashboard/jobs", icon: Briefcase },
   { name: "Auto Apply Queue", href: "/dashboard/queue", icon: Send },
   { name: "Email Outreach", href: "/dashboard/emails", icon: Mail },
+  { name: "Browser Automation", href: "/dashboard/automation", icon: Zap },
   { name: "Analytics", href: "/dashboard/analytics", icon: BarChart3 },
   { name: "Resume Library", href: "/dashboard/resumes", icon: FileText },
 ]
@@ -45,9 +47,9 @@ export function DashboardSidebar() {
         {isOpen && (
           <Link href="/dashboard" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">JA</span>
+              <span className="text-white font-bold text-sm">JAI</span>
             </div>
-            <span className="font-bold text-sm hidden sm:inline">JobAI</span>
+            <span className="font-bold text-sm hidden sm:inline">Jobber AI</span>
           </Link>
         )}
         <button

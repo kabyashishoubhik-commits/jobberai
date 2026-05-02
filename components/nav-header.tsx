@@ -15,9 +15,9 @@ export function NavHeader() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">JA</span>
+              <span className="text-white font-bold text-sm">JAI</span>
             </div>
-            <span className="font-bold text-xl hidden sm:inline">JobAccelerator</span>
+            <span className="font-bold text-xl hidden sm:inline">Jobber AI</span>
           </Link>
 
           {/* Desktop Navigation */}

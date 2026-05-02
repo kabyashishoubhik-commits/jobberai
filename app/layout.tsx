@@ -9,9 +9,9 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 const _inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "JobAccelerateAI - Get 3x More Interviews Using AI",
+  title: "Jobber AI - Auto Job Application Platform",
   description:
-    "Automate your job search with AI agents. Auto-apply to jobs daily, email recruiters, and optimize your CV for maximum results.",
+    "Automate your job applications with AI-powered browser automation. Apply to thousands of jobs on LinkedIn, Wellfound, and Naukri automatically.",
   generator: "v0.app",
   icons: {
     icon: [

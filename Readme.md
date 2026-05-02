@@ -1,9 +1,9 @@
-# 🚀 JobAccelerateAi — Autonomous AI Job Search Engine
+# 🚀 Jobber AI — Autonomous AI Job Search Engine
 
 **Get 3x More Interviews With Automated Job Matching, Auto-Apply, Recruiter Outreach & Analytics**
 
 <p align="center">
-  <img src="assets/banner.png" alt="JobAccelerateAi Banner" width="800"/>
+  <img src="assets/banner.png" alt="Jobber AI Banner" width="800"/>
 </p>
 
 <p align="center">
@@ -14,14 +14,14 @@
   <a href="#"><img src="https://img.shields.io/badge/Status-Active_Development-blue?style=flat-square" alt="status"></a>
   <a href="#"><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="license"></a>
   <a href="#"><img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square" alt="prs-welcome"></a>
-  <a href="#"><img src="https://img.shields.io/github/issues/yourname/jobaccelerateai?style=flat-square" alt="issues"></a>
+  <a href="#"><img src="https://img.shields.io/github/issues/yourname/jobberai?style=flat-square" alt="issues"></a>
 </p>
 
 ---
 
 ## 🚀 Overview
 
-**JobAccelerateAi** is a modern SaaS platform that automates every part of the job search:
+**Jobber AI** is a modern SaaS platform that automates every part of the job search:
 
 - AI agents search and filter jobs daily  
 - Automatically apply on your behalf where permitted  
@@ -108,9 +108,9 @@
                     └──────────────────────────────┘
 ## 📬 Contact & Support
 
-- **Website:** https://jobaccelerate.ai *(coming soon)*  
-- **Support:** support@jobaccelerate.ai  *(coming soon)* 
-- **Security:** security@jobaccelerate.ai  *(coming soon)* 
+- **Website:** https://jobberai.com *(coming soon)*  
+- **Support:** support@jobberai.com  *(coming soon)* 
+- **Security:** security@jobberai.com  *(coming soon)* 
 
 ---
 
@@ -120,4 +120,4 @@ Thanks to the open-source community, job API providers, email providers, and con
 
 ---
 
-**Enjoy building JobAccelerateAi — ship fast, iterate safely, and prioritize user privacy.**
+**Enjoy building Jobber AI — ship fast, iterate safely, and prioritize user privacy.**
