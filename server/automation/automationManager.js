@@ -159,8 +159,25 @@ class AutomationManager {
 
   async applyNaukri(userId, email, password, jobs) {
     try {
-      this.naukri = new NaukriAutomation();
+      // Get user's resume path
+      const user = await new Promise((resolve, reject) => {
+        this.db.get(
+          'SELECT resume_path FROM users WHERE id = ?',
+          [userId],
+          (err, row) => {
+            if (err) reject(err);
+            else resolve(row);
+          }
+        );
+      });
+
+      const resumePath = user?.resume_path ? `./uploads/${user.resume_path}` : null;
+      
+      this.naukri = new NaukriAutomation(resumePath);
       await this.naukri.launch();
+      
+      console.log(`📄 Naukri automation initialized with resume: ${resumePath || 'None'}`);
+
       const loggedIn = await this.naukri.login(email, password);
 
       if (!loggedIn) {

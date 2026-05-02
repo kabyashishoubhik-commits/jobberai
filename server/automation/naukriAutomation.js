@@ -1,9 +1,51 @@
 const puppeteer = require('puppeteer');
+const fs = require('fs');
+const path = require('path');
 
 class NaukriAutomation {
-  constructor() {
+  constructor(resumePath = null) {
     this.browser = null;
     this.page = null;
+    this.resumePath = resumePath;
+    this.resumeData = null;
+  }
+
+  // Extract text data from resume file
+  async loadResumeData() {
+    try {
+      if (!this.resumePath || !fs.existsSync(this.resumePath)) {
+        console.warn('⚠️ Resume file not found');
+        return null;
+      }
+
+      const resumeText = fs.readFileSync(this.resumePath, 'utf-8');
+      
+      // Extract name (first line usually contains name)
+      const nameMatch = resumeText.match(/^(.+?)(?:\n|$)/);
+      const name = nameMatch ? nameMatch[1].trim() : 'Job Seeker';
+
+      // Extract email
+      const emailMatch = resumeText.match(/[\w\.-]+@[\w\.-]+\.\w+/);
+      const email = emailMatch ? emailMatch[0] : '';
+
+      // Extract phone
+      const phoneMatch = resumeText.match(/(?:\+91|\+\d{1,3}|0)?[\s-]?\d{10}/);
+      const phone = phoneMatch ? phoneMatch[0].replace(/\s/g, '') : '';
+
+      this.resumeData = {
+        name,
+        email,
+        phone,
+        filePath: this.resumePath,
+        fileName: path.basename(this.resumePath)
+      };
+
+      console.log(`✅ Resume data loaded:`, this.resumeData);
+      return this.resumeData;
+    } catch (err) {
+      console.error('❌ Failed to load resume data:', err.message);
+      return null;
+    }
   }
 
   async launch() {
@@ -18,6 +60,9 @@ class NaukriAutomation {
         ]
       });
       console.log('✅ Puppeteer browser launched for Naukri');
+      
+      // Load resume data on launch
+      await this.loadResumeData();
     } catch (err) {
       console.error('❌ Failed to launch browser:', err);
       throw err;
@@ -165,6 +210,11 @@ class NaukriAutomation {
 
       await this.page.waitForTimeout(2000);
 
+      // First, try to fill any visible forms with resume data
+      if (this.resumeData) {
+        await this.fillApplicationForm();
+      }
+
       // Look for apply button with multiple selectors
       let applyClicked = false;
       
@@ -179,6 +229,15 @@ class NaukriAutomation {
             await btn.click();
             applyClicked = true;
             console.log('✅ Apply button clicked');
+            
+            // Wait for modal or form to appear
+            await this.page.waitForTimeout(1500);
+
+            // Fill any forms that appear in modal
+            if (this.resumeData) {
+              await this.fillApplicationForm();
+            }
+
             break;
           } catch (e) {
             console.log('⚠️ Could not click button, trying next');
@@ -190,7 +249,23 @@ class NaukriAutomation {
         console.warn('⚠️ Apply button not found');
       }
 
-      await this.page.waitForTimeout(2000);
+      await this.page.waitForTimeout(1500);
+
+      // Try to upload resume if file input exists
+      if (this.resumeData && this.resumeData.filePath) {
+        const fileInputs = await this.page.$$('input[type="file"]');
+        if (fileInputs.length > 0) {
+          console.log('📄 Uploading resume...');
+          try {
+            // Set file input value
+            await fileInputs[0].uploadFile(this.resumeData.filePath);
+            console.log('✅ Resume uploaded');
+            await this.page.waitForTimeout(1000);
+          } catch (err) {
+            console.warn('⚠️ Could not upload resume:', err.message);
+          }
+        }
+      }
 
       // Try to submit any form that appears
       const submitButton = await this.page.$('button[type="submit"]');
@@ -198,6 +273,7 @@ class NaukriAutomation {
         try {
           await submitButton.click();
           console.log('✅ Form submitted');
+          await this.page.waitForTimeout(2000);
           return { success: true, message: 'Applied successfully' };
         } catch (e) {
           console.log('⚠️ Could not submit form');
@@ -211,6 +287,67 @@ class NaukriAutomation {
     } catch (err) {
       console.error('❌ Failed to apply to job:', err.message);
       return { success: false, message: err.message };
+    }
+  }
+
+  // Fill application form with resume data
+  async fillApplicationForm() {
+    try {
+      console.log('📝 Filling application form with resume data...');
+      
+      const formFilled = await this.page.evaluate((resumeData) => {
+        let fieldsFilled = 0;
+
+        // Fill name field
+        const nameFields = document.querySelectorAll(
+          'input[placeholder*="Name" i], input[placeholder*="Full Name" i], ' +
+          'input[name*="name" i], input[name*="fullName" i], ' +
+          'input[aria-label*="name" i]'
+        );
+        nameFields.forEach(field => {
+          if (field.value === '') {
+            field.value = resumeData.name;
+            field.dispatchEvent(new Event('input', { bubbles: true }));
+            field.dispatchEvent(new Event('change', { bubbles: true }));
+            fieldsFilled++;
+          }
+        });
+
+        // Fill email field
+        const emailFields = document.querySelectorAll(
+          'input[type="email"], input[placeholder*="Email" i], ' +
+          'input[name*="email" i], input[aria-label*="email" i]'
+        );
+        emailFields.forEach(field => {
+          if (field.value === '') {
+            field.value = resumeData.email;
+            field.dispatchEvent(new Event('input', { bubbles: true }));
+            field.dispatchEvent(new Event('change', { bubbles: true }));
+            fieldsFilled++;
+          }
+        });
+
+        // Fill phone field
+        const phoneFields = document.querySelectorAll(
+          'input[placeholder*="Phone" i], input[placeholder*="Mobile" i], ' +
+          'input[name*="phone" i], input[name*="mobile" i], ' +
+          'input[aria-label*="phone" i], input[aria-label*="mobile" i]'
+        );
+        phoneFields.forEach(field => {
+          if (field.value === '') {
+            field.value = resumeData.phone;
+            field.dispatchEvent(new Event('input', { bubbles: true }));
+            field.dispatchEvent(new Event('change', { bubbles: true }));
+            fieldsFilled++;
+          }
+        });
+
+        return fieldsFilled;
+      }, this.resumeData);
+
+      console.log(`✅ Filled ${formFilled} form fields`);
+    } catch (err) {
+      console.warn('⚠️ Could not fill form:', err.message);
     }
   }
 
