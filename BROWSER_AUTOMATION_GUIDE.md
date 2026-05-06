@@ -1,7 +1,7 @@
 # 🤖 Browser Automation Setup Guide
 
 ## Overview
-Jobber AI now includes **browser automation** to automatically apply to jobs on LinkedIn, Wellfound, and Naukri!
+JobeerAI now includes **browser automation** to automatically apply to jobs on LinkedIn, Wellfound, and Naukri!
 
 ## How It Works
 
@@ -28,7 +28,7 @@ Searches for jobs → Fills application forms → Submits applications → Logs 
 ## Setup Instructions
 
 ### Step 1: Access Browser Automation
-1. Login to your Jobber AI account
+1. Login to your JobeerAI account
 2. Go to **Dashboard → Browser Automation**
 3. Or navigate to: `http://localhost:3000/dashboard/automation`
 

@@ -16,7 +16,7 @@ export default function TermsPage() {
             <Card className="p-6 glassmorphic border-border/20">
               <h2 className="text-2xl font-bold mb-4">1. Acceptance of Terms</h2>
               <p className="text-muted-foreground leading-relaxed">
-                By accessing and using the Jobber AI website and Service, you accept and agree to be bound by the
+                By accessing and using the JobeerAI website and Service, you accept and agree to be bound by the
                 terms and provision of this agreement. If you do not agree to abide by the above, please do not use this
                 service.
               </p>
@@ -27,7 +27,7 @@ export default function TermsPage() {
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   Permission is granted to temporarily download one copy of the materials (information or software) on
-                  Jobber AI for personal, non-commercial transitory viewing only. This is the grant of a license,
+                  JobeerAI for personal, non-commercial transitory viewing only. This is the grant of a license,
                   not a transfer of title, and under this license you may not:
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-2">
@@ -43,7 +43,7 @@ export default function TermsPage() {
             <Card className="p-6 glassmorphic border-border/20">
               <h2 className="text-2xl font-bold mb-4">3. Disclaimer</h2>
               <p className="text-muted-foreground leading-relaxed">
-                The materials on Jobber AI are provided on an 'as is' basis. Jobber AI makes no warranties,
+                The materials on JobeerAI are provided on an 'as is' basis. JobeerAI makes no warranties,
                 expressed or implied, and hereby disclaims and negates all other warranties including, without
                 limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or
                 non-infringement of intellectual property or other violation of rights.
@@ -53,9 +53,9 @@ export default function TermsPage() {
             <Card className="p-6 glassmorphic border-border/20">
               <h2 className="text-2xl font-bold mb-4">4. Limitations</h2>
               <p className="text-muted-foreground leading-relaxed">
-                In no event shall Jobber AI or its suppliers be liable for any damages (including, without
+                In no event shall JobeerAI or its suppliers be liable for any damages (including, without
                 limitation, damages for loss of data or profit, or due to business interruption) arising out of the use
-                or inability to use the materials on Jobber AI.
+                or inability to use the materials on JobeerAI.
               </p>
             </Card>
 

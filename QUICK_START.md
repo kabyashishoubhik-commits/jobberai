@@ -1,8 +1,8 @@
-# 🚀 JobAccelerate - QUICK START GUIDE
+# 🚀 JobeerAI - QUICK START GUIDE
 
 ## ✅ EVERYTHING IS RUNNING!
 
-Your JobAccelerate application is **fully operational** with all features ready to use!
+Your JobeerAI application is **fully operational** with all features ready to use!
 
 ---
 
@@ -141,7 +141,7 @@ You see results in "External Applications"
 
 ### Database Location
 ```
-C:\Users\sachd\Downloads\JobAccelerate-main\db.sqlite
+C:\Users\sachd\Downloads\JobeerAI-main\db.sqlite
 ```
 
 ### What Gets Stored
@@ -287,13 +287,13 @@ A: Yes! Mix manual and automated applications for best results.
 A: Depends on number of jobs. Usually 2-5 minutes for 20-30 applications.
 
 **Q: Can I use multiple email addresses?**
-A: Yes, create multiple accounts on JobAccelerate.
+A: Yes, create multiple accounts on JobeerAI.
 
 ---
 
 ## 🎉 You're All Set!
 
-Your JobAccelerate is fully configured and ready to help you land your next job!
+Your JobeerAI is fully configured and ready to help you land your next job!
 
 ### Next Steps:
 1. ✅ Open http://localhost:3000

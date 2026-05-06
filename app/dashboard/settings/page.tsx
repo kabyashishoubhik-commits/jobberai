@@ -29,7 +29,10 @@ export default function SettingsPage() {
   const loadSettings = async () => {
     try {
       const data = await autoApplyAPI.getSettings()
-      setSettings(data)
+      setSettings({
+        auto_apply_enabled: !!data.auto_apply_enabled,
+        daily_limit: Number(data.daily_limit) || 5,
+      })
     } catch (err: any) {
       setError("Failed to load settings")
     } finally {
@@ -41,7 +44,10 @@ export default function SettingsPage() {
     try {
       setError("")
       setSuccess("")
-      await autoApplyAPI.updateSettings(settings)
+      await autoApplyAPI.updateSettings({
+        autoApplyEnabled: settings.auto_apply_enabled,
+        dailyLimit: settings.daily_limit,
+      })
       setSuccess("Settings saved successfully!")
       setTimeout(() => setSuccess(""), 3000)
     } catch (err: any) {

@@ -1,7 +1,7 @@
-# 🤖 Jobber AI - Complete Project Documentation
+# 🤖 JobeerAI - Complete Project Documentation
 
 ## 📋 Table of Contents
-1. [What is Jobber AI?](#what-is-jobber-ai)
+1. [What is JobeerAI?](#what-is-jobeerai)
 2. [Current Features](#current-features)
 3. [Architecture & Tech Stack](#architecture--tech-stack)
 4. [How the Browser Automation Works](#how-the-browser-automation-works)
@@ -14,9 +14,9 @@
 
 ---
 
-## What is Jobber AI?
+## What is JobeerAI?
 
-**Jobber AI** is an autonomous job application platform that automates the entire job search process. It intelligently searches for jobs matching your criteria, applies automatically across multiple job platforms, tracks applications, and provides analytics to help you land more interviews.
+**JobeerAI** is an autonomous job application platform that automates the entire job search process. It intelligently searches for jobs matching your criteria, applies automatically across multiple job platforms, tracks applications, and provides analytics to help you land more interviews.
 
 ### Core Mission
 Help job seekers get 3x more interviews by:
@@ -827,7 +827,7 @@ SELECT user_id, platform FROM user_credentials;
 
 ## Contact & Support
 - **Issues**: Check logs in server console
-- **Feature Requests**: Email: support@jobberai.com
+- **Feature Requests**: Email: support@JobeerAI.com
 - **Documentation**: See PROJECT_DOCUMENTATION.md
 
 ---

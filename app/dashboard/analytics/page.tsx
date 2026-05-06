@@ -9,23 +9,23 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 
 export default function AnalyticsPage() {
   const conversionData = [
-    { stage: "Applications", value: 389 },
-    { stage: "Replies", value: 45 },
-    { stage: "Interviews", value: 12 },
+    { stage: "Applications", value: 349 },
+    { stage: "Replies", value: 41 },
+    { stage: "Interviews", value: 11 },
     { stage: "Offers", value: 2 },
   ]
 
   const cvPerformance = [
-    { name: "CV v1", applications: 145, replies: 18, interviews: 4 },
-    { name: "CV v2", applications: 89, replies: 14, interviews: 5 },
-    { name: "CV v3", applications: 155, replies: 13, interviews: 3 },
+    { name: "Software Resume", applications: 128, replies: 16, interviews: 4 },
+    { name: "Product Resume", applications: 94, replies: 12, interviews: 3 },
+    { name: "Data Resume", applications: 127, replies: 13, interviews: 4 },
   ]
 
   const jobSourceData = [
-    { name: "LinkedIn", value: 145 },
-    { name: "Indeed", value: 89 },
-    { name: "Wellfound", value: 75 },
-    { name: "Glassdoor", value: 80 },
+    { name: "LinkedIn", value: 143 },
+    { name: "Naukri", value: 121 },
+    { name: "Wellfound", value: 64 },
+    { name: "Manual", value: 21 },
   ]
 
   const COLORS = ["var(--color-primary)", "var(--color-secondary)", "var(--color-accent)", "var(--color-chart-4)"]
@@ -42,10 +42,10 @@ export default function AnalyticsPage() {
           {/* Key Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
             {[
-              { label: "Total Applications", value: "389", change: "+42%" },
-              { label: "Email Open Rate", value: "34%", change: "+12%" },
-              { label: "Reply Rate", value: "11.5%", change: "+3%" },
-              { label: "Interview Rate", value: "3.1%", change: "+1.2%" },
+              { label: "Total Applications", value: "349", change: "+18%" },
+              { label: "Email Open Rate", value: "37%", change: "+8%" },
+              { label: "Reply Rate", value: "11.7%", change: "+2%" },
+              { label: "Interview Rate", value: "3.2%", change: "+0.8%" },
             ].map((metric, i) => (
               <Card key={i} className="p-4 glassmorphic border-border/20">
                 <p className="text-sm text-muted-foreground mb-1">{metric.label}</p>

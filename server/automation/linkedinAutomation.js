@@ -1,108 +1,151 @@
 const puppeteer = require('puppeteer');
 
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 class LinkedInAutomation {
-  constructor() {
+  constructor(options = {}) {
     this.browser = null;
     this.page = null;
+    this.options = options;
   }
 
   async launch() {
     try {
       this.browser = await puppeteer.launch({
-        headless: 'new',
-        args: [
-          '--no-sandbox',
-          '--disable-setuid-sandbox',
-          '--disable-dev-shm-usage'
-        ]
+        headless: this.options.headless ?? 'new',
+        defaultViewport: this.options.headless === false ? null : undefined,
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--start-maximized'],
       });
-      console.log('✅ Puppeteer browser launched');
+      console.log('Puppeteer browser launched for LinkedIn');
     } catch (err) {
-      console.error('❌ Failed to launch browser:', err);
+      console.error('Failed to launch LinkedIn browser:', err);
       throw err;
     }
   }
 
+  async ensurePage() {
+    if (!this.page) {
+      this.page = await this.browser.newPage();
+      await this.page.setUserAgent(
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/121 Safari/537.36'
+      );
+    }
+    return this.page;
+  }
+
+  async openManualLogin(startUrl = 'https://www.linkedin.com/login') {
+    const page = await this.ensurePage();
+    await page.goto(startUrl || 'https://www.linkedin.com/login', { waitUntil: 'domcontentloaded', timeout: 60000 });
+    await delay(1000);
+    return true;
+  }
+
   async login(email, password) {
     try {
-      this.page = await this.browser.newPage();
-      await this.page.goto('https://www.linkedin.com/login', { waitUntil: 'networkidle2' });
+      const page = await this.ensurePage();
+      await page.goto('https://www.linkedin.com/login', { waitUntil: 'domcontentloaded', timeout: 60000 });
 
-      // Fill email
-      await this.page.type('input[name="session_key"]', email, { delay: 50 });
-      
-      // Fill password
-      await this.page.type('input[name="session_password"]', password, { delay: 50 });
-      
-      // Click login
-      await this.page.click('button[type="submit"]');
-      
-      // Wait for navigation
-      await this.page.waitForNavigation({ waitUntil: 'networkidle2' });
-      
-      console.log('✅ LinkedIn login successful');
-      return true;
+      await page.type('input[name="session_key"]', email, { delay: 50 });
+      await page.type('input[name="session_password"]', password, { delay: 50 });
+      await page.click('button[type="submit"]');
+      await delay(5000);
+
+      console.log('LinkedIn login submitted');
+      return !/login/i.test(page.url());
     } catch (err) {
-      console.error('❌ LinkedIn login failed:', err);
+      console.error('LinkedIn login failed:', err.message);
       return false;
     }
   }
 
   async searchJobs(keyword, location) {
     try {
-      const searchUrl = `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(keyword)}&location=${encodeURIComponent(location)}`;
-      await this.page.goto(searchUrl, { waitUntil: 'networkidle2' });
+      const page = await this.ensurePage();
+      const searchUrl = `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(keyword)}&location=${encodeURIComponent(
+        location
+      )}&f_AL=true`;
+      await page.goto(searchUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
+      await delay(3000);
 
-      // Scroll to load more jobs
-      await this.page.evaluate(() => {
-        window.scrollBy(0, window.innerHeight);
+      for (let i = 0; i < 4; i += 1) {
+        await page.evaluate(() => window.scrollBy(0, window.innerHeight));
+        await delay(800);
+      }
+
+      const jobs = await page.evaluate(() => {
+        const cards = Array.from(
+          document.querySelectorAll('.job-card-container, .jobs-search-results__list-item, .base-card')
+        );
+
+        return cards
+          .map((job) => {
+            const titleEl = job.querySelector('.job-card-list__title, .base-search-card__title, a[href*="/jobs/view"]');
+            const companyEl = job.querySelector('.artdeco-entity-lockup__subtitle, .base-search-card__subtitle');
+            const locationEl = job.querySelector('.job-card-container__metadata-item, .job-search-card__location');
+            const linkEl = job.querySelector('a[href*="/jobs/view"]');
+            const href = linkEl?.href;
+            const title = titleEl?.textContent?.trim();
+
+            if (!title || !href) return null;
+            return {
+              title,
+              company: companyEl?.textContent?.trim() || 'Company',
+              location: locationEl?.textContent?.trim() || '',
+              link: href.split('?')[0],
+              source: 'LinkedIn',
+            };
+          })
+          .filter(Boolean)
+          .slice(0, 20);
       });
 
-      await this.page.waitForTimeout(2000);
-
-      // Get job listings
-      const jobs = await this.page.evaluate(() => {
-        return Array.from(document.querySelectorAll('.base-card')).map(job => ({
-          title: job.querySelector('.base-search-card__title')?.textContent?.trim(),
-          company: job.querySelector('.base-search-card__subtitle')?.textContent?.trim(),
-          link: job.querySelector('a')?.href,
-        }));
-      });
-
-      console.log(`✅ Found ${jobs.length} jobs on LinkedIn`);
+      console.log(`Found ${jobs.length} jobs on LinkedIn`);
       return jobs;
     } catch (err) {
-      console.error('❌ Job search failed:', err);
+      console.error('LinkedIn job search failed:', err.message);
       return [];
     }
   }
 
+  async clickButtonByText(keywords) {
+    return this.page.evaluate((buttonKeywords) => {
+      const elements = Array.from(document.querySelectorAll('button, a'));
+      const target = elements.find((element) => {
+        const text = `${element.textContent || ''} ${element.getAttribute('aria-label') || ''}`.toLowerCase();
+        return buttonKeywords.some((keyword) => text.includes(keyword));
+      });
+
+      if (target) {
+        target.click();
+        return true;
+      }
+      return false;
+    }, keywords);
+  }
+
   async applyToJob(jobUrl) {
     try {
-      await this.page.goto(jobUrl, { waitUntil: 'networkidle2' });
+      const page = await this.ensurePage();
+      await page.goto(jobUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
+      await delay(2500);
 
-      // Click Easy Apply button if available
-      const easyApplyButton = await this.page.$('button[aria-label="Easy Apply"]');
-      
-      if (easyApplyButton) {
-        await easyApplyButton.click();
-        await this.page.waitForTimeout(1000);
-
-        // Handle application form
-        const submitButton = await this.page.$('button[aria-label="Submit application"]');
-        if (submitButton) {
-          await submitButton.click();
-          console.log('✅ Application submitted to LinkedIn job');
-          return { success: true, message: 'Applied successfully' };
-        }
-      } else {
-        console.log('⚠️ Easy Apply button not found');
-        return { success: false, message: 'Easy Apply not available for this job' };
+      const easyApplyClicked = await this.clickButtonByText(['easy apply']);
+      if (!easyApplyClicked) {
+        return { success: false, message: 'Easy Apply is not available for this job' };
       }
 
-      return { success: true, message: 'Applied successfully' };
+      await delay(1500);
+      await this.clickButtonByText(['next', 'review']);
+      await delay(1000);
+      const submitted = await this.clickButtonByText(['submit application']);
+      await delay(1000);
+
+      return {
+        success: submitted,
+        message: submitted ? 'Application submitted' : 'Application opened for review',
+      };
     } catch (err) {
-      console.error('❌ Failed to apply to job:', err);
+      console.error('Failed to apply to LinkedIn job:', err.message);
       return { success: false, message: err.message };
     }
   }
@@ -110,7 +153,9 @@ class LinkedInAutomation {
   async close() {
     if (this.browser) {
       await this.browser.close();
-      console.log('✅ Browser closed');
+      this.browser = null;
+      this.page = null;
+      console.log('LinkedIn browser closed');
     }
   }
 }

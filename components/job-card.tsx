@@ -13,6 +13,7 @@ interface JobCardProps {
   company: string
   location: string
   salary?: string
+  description?: string
   matchScore: number
   tags: string[]
   posted: string
@@ -26,6 +27,7 @@ export function JobCard({
   company, 
   location, 
   salary, 
+  description,
   matchScore, 
   tags, 
   posted,
@@ -68,6 +70,7 @@ export function JobCard({
       </div>
 
       {salary && <p className="text-sm font-semibold text-accent mb-3">{salary}</p>}
+      {description && <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{description}</p>}
 
       <div className="flex flex-wrap gap-1 mb-4">
         {tags.map((tag) => (

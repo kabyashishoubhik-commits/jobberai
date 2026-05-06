@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 class JobScraper {
   constructor() {
@@ -28,7 +29,7 @@ class JobScraper {
         await page.evaluate(() => {
           window.scrollBy(0, window.innerHeight);
         });
-        await page.waitForTimeout(500);
+        await delay(500);
       }
 
       const jobs = await page.evaluate(() => {
@@ -61,7 +62,7 @@ class JobScraper {
         await page.evaluate(() => {
           window.scrollBy(0, window.innerHeight);
         });
-        await page.waitForTimeout(500);
+        await delay(500);
       }
 
       const jobs = await page.evaluate(() => {
@@ -85,7 +86,8 @@ class JobScraper {
   async scrapeNaukriJobs(keyword, location, limit = 10) {
     try {
       const page = await this.browser.newPage();
-      const searchUrl = `https://www.naukri.com/${keyword}-jobs-in-${location.replace(/\s+/g, '-')}`;
+      const slug = (value) => String(value || '').trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      const searchUrl = `https://www.naukri.com/${slug(keyword)}-jobs-in-${slug(location)}`;
       
       await page.goto(searchUrl, { waitUntil: 'networkidle2' });
 
@@ -94,7 +96,7 @@ class JobScraper {
         await page.evaluate(() => {
           window.scrollBy(0, window.innerHeight);
         });
-        await page.waitForTimeout(500);
+        await delay(500);
       }
 
       const jobs = await page.evaluate(() => {

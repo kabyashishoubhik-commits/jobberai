@@ -13,7 +13,7 @@ const stats = [
   },
   {
     label: "Applications Submitted",
-    value: "389",
+    value: "349",
     icon: Send,
     change: "+12%",
     color: "from-secondary/20 to-secondary/5",
@@ -27,16 +27,16 @@ const stats = [
   },
   {
     label: "Replies Received",
-    value: "23",
+    value: "41",
     icon: CheckCircle,
-    change: "+5%",
+    change: "+9%",
     color: "from-blue-500/20 to-blue-500/5",
   },
   {
     label: "Interview Conversions",
-    value: "4",
+    value: "11",
     icon: Zap,
-    change: "1.2%",
+    change: "3.2%",
     color: "from-purple-500/20 to-purple-500/5",
   },
   {

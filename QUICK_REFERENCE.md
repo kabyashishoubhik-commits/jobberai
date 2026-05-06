@@ -1,4 +1,4 @@
-# 🚀 Jobber AI - Quick Reference Card
+# 🚀 JobeerAI - Quick Reference Card
 
 ## 📍 URLs
 

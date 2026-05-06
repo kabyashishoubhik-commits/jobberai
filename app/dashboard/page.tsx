@@ -4,11 +4,13 @@ import { DashboardSidebar } from "@/components/dashboard-sidebar"
 import { DashboardHeader } from "@/components/dashboard-header"
 import { DashboardStats } from "@/components/dashboard-stats"
 import { JobCard } from "@/components/job-card"
+import { AppliedCompanies } from "@/components/applied-companies"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { useEffect, useState } from "react"
 import { jobsAPI, applicationsAPI, analyticsAPI } from "@/lib/api"
+import { RefreshCw } from "lucide-react"
 
 interface Job {
   id: number
@@ -25,6 +27,7 @@ interface Application {
   status: string
   title: string
   company: string
+  applied_date?: string
 }
 
 export default function DashboardPage() {
@@ -32,27 +35,39 @@ export default function DashboardPage() {
   const [applications, setApplications] = useState<Application[]>([])
   const [stats, setStats] = useState({ totalApplications: 0, interviewCount: 0 })
   const [loading, setLoading] = useState(true)
+  const [refreshing, setRefreshing] = useState(false)
   const [error, setError] = useState("")
 
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const [jobsData, appsData, statsData] = await Promise.all([
-          jobsAPI.getRecommended(),
-          applicationsAPI.getMyApplications(),
-          analyticsAPI.getStats(),
-        ])
-        setJobs(jobsData)
-        setApplications(appsData)
-        setStats(statsData)
-      } catch (err) {
-        console.error(err)
-        setError("Failed to load dashboard data")
-      } finally {
-        setLoading(false)
-      }
+  const loadData = async () => {
+    try {
+      const [jobsData, appsData, statsData] = await Promise.all([
+        jobsAPI.getRecommended(),
+        applicationsAPI.getMyApplications(),
+        analyticsAPI.getStats(),
+      ])
+      setJobs(jobsData)
+      setApplications(appsData)
+      setStats(statsData)
+    } catch (err) {
+      console.error(err)
+      setError("Failed to load dashboard data")
+    } finally {
+      setLoading(false)
+      setRefreshing(false)
     }
+  }
 
+  const handleRefresh = async () => {
+    setRefreshing(true)
+    await loadData()
+  }
+
+  const handleSyncComplete = () => {
+    // Reload applications after sync
+    loadData()
+  }
+
+  useEffect(() => {
     loadData()
   }, [])
 
@@ -158,7 +173,14 @@ export default function DashboardPage() {
                   </div>
                   <div className="flex justify-between">
                     <span>Applied Today:</span>
-                    <span>{applications.filter(a => new Date(a.id).toDateString() === new Date().toDateString()).length}</span>
+                    <span>
+                      {
+                        applications.filter((application) => {
+                          if (!application.applied_date) return false
+                          return new Date(application.applied_date).toDateString() === new Date().toDateString()
+                        }).length
+                      }
+                    </span>
                   </div>
                   <Button className="w-full mt-4 bg-primary hover:bg-primary/90" asChild>
                     <a href="/dashboard/settings">Configure</a>
@@ -166,15 +188,28 @@ export default function DashboardPage() {
                 </div>
               </Card>
 
+              {/* Applied Companies */}
+              <AppliedCompanies applications={applications} onSync={handleSyncComplete} />
+
               {/* Recent Applications */}
               <Card className="p-6">
-                <h2 className="font-bold mb-4">Recent Applications</h2>
-                <div className="space-y-2 text-sm max-h-64 overflow-y-auto">
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="font-bold">All Applications ({applications.length})</h2>
+                  <Button 
+                    size="sm" 
+                    variant="ghost" 
+                    onClick={handleRefresh}
+                    disabled={refreshing}
+                  >
+                    <RefreshCw className={`w-4 h-4 ${refreshing ? 'animate-spin' : ''}`} />
+                  </Button>
+                </div>
+                <div className="space-y-2 text-sm max-h-96 overflow-y-auto">
                   {applications.length === 0 ? (
                     <p className="text-muted-foreground">No applications yet</p>
                   ) : (
-                    applications.slice(0, 5).map((app) => (
-                      <div key={app.id} className="flex justify-between">
+                    applications.map((app) => (
+                      <div key={app.id} className="flex justify-between items-center p-2 hover:bg-muted rounded">
                         <div>
                           <p className="font-medium">{app.title}</p>
                           <p className="text-xs text-muted-foreground">{app.company}</p>

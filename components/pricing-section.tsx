@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Check } from "lucide-react"
 import { useState } from "react"
+import Link from "next/link"
 
 const plans = [
   {
@@ -112,8 +113,8 @@ export function PricingSection() {
                 {plan.period && <span className="text-muted-foreground">{plan.period}</span>}
               </div>
 
-              <Button className="w-full mb-8" size="lg" variant={plan.popular ? "default" : "outline"}>
-                {plan.cta}
+              <Button className="w-full mb-8" size="lg" variant={plan.popular ? "default" : "outline"} asChild>
+                <Link href="/signup">{plan.cta}</Link>
               </Button>
 
               <div className="space-y-4 flex-1">

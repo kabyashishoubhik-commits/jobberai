@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# JobAccelerate - Quick Start & Status Check
+# JobeerAI - Quick Start & Status Check
 # Run this to verify all systems are operational
 
-echo "🔍 Checking JobAccelerate System Status..."
+echo "Checking JobeerAI System Status..."
 echo ""
 
 # Check Frontend (Port 3000)

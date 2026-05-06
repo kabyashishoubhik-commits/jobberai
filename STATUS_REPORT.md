@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# 🚀 JobAccelerate - FULLY OPERATIONAL STATUS REPORT
+# 🚀 JobeerAI - FULLY OPERATIONAL STATUS REPORT
 # May 1, 2026
 
 echo "════════════════════════════════════════════════════════════════"
-echo "    🎉 JOBACCELERATE - PRODUCTION READY 🎉"
+echo "    🎉 JobeerAI - PRODUCTION READY 🎉"
 echo "════════════════════════════════════════════════════════════════"
 echo ""
 

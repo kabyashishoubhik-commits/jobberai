@@ -1,4 +1,4 @@
-# 🎯 Jobber AI - Improvement & Enhancement Roadmap
+# 🎯 JobeerAI - Improvement & Enhancement Roadmap
 
 ## Current Project Capabilities (v1.0)
 
@@ -476,14 +476,14 @@ socket.on('automation:complete', (data) => {
 npm install pg sequelize
 
 # Create database
-createdb jobber_ai
+createdb jobeerai
 ```
 
 ```javascript
 // Much better than SQLite for production
 const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize(
-  'jobber_ai',
+  'jobeerai',
   'postgres',
   'password',
   { host: 'localhost', dialect: 'postgres' }
@@ -607,15 +607,15 @@ class StackOverflowAutomation extends BaseAutomation {
 // app.json
 {
   "expo": {
-    "name": "Jobber AI",
+    "name": "JobeerAI",
     "version": "1.0.0",
     "platforms": ["ios", "android"],
-    "ios": { "bundleIdentifier": "com.jobberai.app" }
+    "ios": { "bundleIdentifier": "com.JobeerAI.app" }
   }
 }
 
 // Share backend with web app
-// API endpoint: https://api.jobberai.com/v1/...
+// API endpoint: https://api.JobeerAI.com/v1/...
 ```
 
 ### 💜 Browser Extension
@@ -624,7 +624,7 @@ class StackOverflowAutomation extends BaseAutomation {
 // chrome_extension/manifest.json
 {
   "manifest_version": 3,
-  "name": "Jobber AI",
+  "name": "JobeerAI",
   "permissions": ["activeTab", "scripting"],
   "action": { "default_popup": "popup.html" }
 }
@@ -764,7 +764,7 @@ Technical Metrics:
 
 ```
 ┌─────────────────────────────────────────────────┐
-│        JOBBER AI - Career Acceleration          │
+│        JobeerAI - Career Acceleration          │
 │                   Platform                      │
 └─────────────────────────────────────────────────┘
         ↓

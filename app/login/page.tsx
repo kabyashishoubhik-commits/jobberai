@@ -6,7 +6,7 @@ import { AuthCard } from "@/components/auth-card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { authAPI } from "@/lib/api"
 
@@ -17,14 +17,20 @@ export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const authError = params.get("error")
+    if (authError) setError(authError)
+  }, [])
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError("")
     setIsLoading(true)
-    
+
     try {
       await authAPI.login(email, password)
-      router.push('/dashboard')
+      router.push("/dashboard")
     } catch (err: any) {
       setError(err.message)
     } finally {
@@ -33,17 +39,13 @@ export default function LoginPage() {
   }
 
   const handleGoogleLogin = () => {
-    setError("Google login is coming soon! Please use email/password to login.")
+    authAPI.startGoogleLogin()
   }
 
   return (
-    <AuthCard title="Welcome Back" subtitle="Sign in to your Jobber AI account">
-      {error && (
-        <div className="mb-4 p-3 bg-red-100 text-red-700 rounded text-sm">
-          {error}
-        </div>
-      )}
-      
+    <AuthCard title="Welcome Back" subtitle="Sign in to your JobeerAI account">
+      {error && <div className="mb-4 p-3 bg-red-100 text-red-700 rounded text-sm">{error}</div>}
+
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium mb-2">Email</label>
@@ -63,7 +65,7 @@ export default function LoginPage() {
           <label className="block text-sm font-medium mb-2">Password</label>
           <Input
             type="password"
-            placeholder="••••••••"
+            placeholder="Password"
             value={password}
             onChange={(e) => {
               setPassword(e.target.value)
@@ -83,11 +85,7 @@ export default function LoginPage() {
           </Link>
         </div>
 
-        <Button
-          type="submit"
-          className="w-full bg-primary hover:bg-primary/90 text-foreground font-semibold"
-          disabled={isLoading}
-        >
+        <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-foreground font-semibold" disabled={isLoading}>
           {isLoading ? "Signing in..." : "Sign In"}
         </Button>
       </form>
@@ -101,12 +99,7 @@ export default function LoginPage() {
         </div>
       </div>
 
-      <Button 
-        type="button"
-        onClick={handleGoogleLogin}
-        variant="outline" 
-        className="w-full border-border/20 bg-transparent" 
-      >
+      <Button type="button" onClick={handleGoogleLogin} variant="outline" className="w-full border-border/20 bg-transparent">
         Continue with Google
       </Button>
 

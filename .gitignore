@@ -1,1 +1,7 @@
 node_modules/
+.env*.local
+.next/
+uploads/
+db.sqlite
+*.log
+*.tsbuildinfo

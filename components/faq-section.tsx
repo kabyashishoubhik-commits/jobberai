@@ -71,7 +71,7 @@ export function FAQSection() {
       <div className="mx-auto max-w-4xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-          <p className="text-lg text-muted-foreground">Everything you need to know about JobAccelerateAI</p>
+          <p className="text-lg text-muted-foreground">Everything you need to know about JobeerAI</p>
         </div>
 
         <Accordion type="single" collapsible className="w-full">

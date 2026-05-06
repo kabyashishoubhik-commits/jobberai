@@ -1,8 +1,8 @@
-# 🚀 Jobber AI - Browser Automation Activation Guide
+# 🚀 JobeerAI - Browser Automation Activation Guide
 
 ## ✅ System Status
 
-Your Jobber AI browser automation agent is **READY TO ACTIVATE**!
+Your JobeerAI browser automation agent is **READY TO ACTIVATE**!
 
 ### Currently Running:
 - ✅ Backend API Server (Port 5000)

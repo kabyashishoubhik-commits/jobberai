@@ -20,9 +20,9 @@ export function AuthCard({ title, subtitle, children }: AuthCardProps) {
         <div className="mb-8 text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">JA</span>
+              <span className="text-white font-bold">JB</span>
             </div>
-            <span className="font-bold text-xl">JobAccelerator</span>
+            <span className="font-bold text-xl">JobeerAI</span>
           </div>
           <h1 className="text-2xl font-bold mb-2">{title}</h1>
           {subtitle && <p className="text-sm text-muted-foreground">{subtitle}</p>}

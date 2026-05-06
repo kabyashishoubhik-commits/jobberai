@@ -16,6 +16,8 @@ import {
   Zap,
 } from "lucide-react"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
+import { authAPI } from "@/lib/api"
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
@@ -34,7 +36,13 @@ const secondary = [
 
 export function DashboardSidebar() {
   const pathname = usePathname()
+  const router = useRouter()
   const [isOpen, setIsOpen] = useState(true)
+
+  const handleLogout = () => {
+    authAPI.logout()
+    router.push("/login")
+  }
 
   return (
     <aside
@@ -47,9 +55,9 @@ export function DashboardSidebar() {
         {isOpen && (
           <Link href="/dashboard" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">JAI</span>
+              <span className="text-white font-bold text-sm">JB</span>
             </div>
-            <span className="font-bold text-sm hidden sm:inline">Jobber AI</span>
+            <span className="font-bold text-sm hidden sm:inline">JobeerAI</span>
           </Link>
         )}
         <button
@@ -105,6 +113,7 @@ export function DashboardSidebar() {
         })}
 
         <button
+          onClick={handleLogout}
           className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-destructive hover:bg-destructive/10 transition text-sm font-medium"
           title="Logout"
         >

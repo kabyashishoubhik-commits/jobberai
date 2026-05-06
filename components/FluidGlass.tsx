@@ -320,7 +320,7 @@ function Typography() {
       anchorX="center"
       anchorY="middle"
     >
-      JobAccelerator
+      JobeerAI
     </Text>
   );
 }

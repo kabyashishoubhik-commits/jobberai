@@ -16,7 +16,7 @@ export default function PrivacyPage() {
             <Card className="p-6 glassmorphic border-border/20">
               <h2 className="text-2xl font-bold mb-4">1. Introduction</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Jobber AI ("Company", "we", "our", or "us") operates the Jobber AI website and mobile
+                JobeerAI ("Company", "we", "our", or "us") operates the JobeerAI website and mobile
                 application (the "Service"). This page informs you of our policies regarding the collection, use, and
                 disclosure of personal data when you use our Service and the choices you have associated with that data.
               </p>
@@ -59,7 +59,7 @@ export default function PrivacyPage() {
             <Card className="p-6 glassmorphic border-border/20">
               <h2 className="text-2xl font-bold mb-4">5. Contact Us</h2>
               <p className="text-muted-foreground">
-                If you have any questions about this Privacy Policy, please contact us at: privacy@jobaccelerator.ai
+                If you have any questions about this Privacy Policy, please contact us at: privacy@JobeerAI.ai
               </p>
             </Card>
           </div>

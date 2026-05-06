@@ -42,7 +42,7 @@ export function FeaturesDeepDive() {
 
 
 // -------------------------
-// UPDATED FEATURES FOR JOBACCELERATEAI
+// UPDATED FEATURES FOR JobeerAI
 // -------------------------
 
 const features = [

@@ -1,4 +1,4 @@
-# 📚 Jobber AI - Documentation Index
+# 📚 JobeerAI - Documentation Index
 
 ## 🎯 Start Here
 
@@ -173,7 +173,7 @@ Contents:
 After reading all documents, you'll understand:
 
 ```
-✅ What Jobber AI does and how it works
+✅ What JobeerAI does and how it works
 ✅ How browser automation (Puppeteer) works
 ✅ How to activate and use the system
 ✅ The complete architecture & tech stack
@@ -315,7 +315,7 @@ Focus on: Vulnerabilities, best practices, compliance
 
 All documents are stored in:
 ```
-c:\Users\sachd\Downloads\JobAccelerate-main\
+c:\Users\sachd\Downloads\JobeerAI-main\
 ├── QUICK_REFERENCE.md
 ├── AUTOMATION_ACTIVATION_GUIDE.md
 ├── README_SUMMARY.md
